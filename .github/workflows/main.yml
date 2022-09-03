@@ -1,0 +1,31 @@
+name: tests-and-lints-checkings
+
+on:
+  push: 
+    branches: [ "main", "staging" ]
+  pull_request:
+    branches: [ "main", "staging" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+       node-version: [15.x]
+        
+    steps:
+      - name: Git clone repo
+        uses: actions/checkout@v3
+      - name: install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install node modules
+        run: npm ci
+        working-directory: reactjs-films-homework
+      - name: build project
+        run: npm run build
+        working-directory: reactjs-films-homework
+      - name: test check
+        run: npm run test
+        working-directory: reactjs-films-homework
