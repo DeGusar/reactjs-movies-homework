@@ -26,6 +26,4 @@ jobs:
       - name: build project
         run: npm run build
         working-directory: reactjs-films-homework
-      - name: test check
-        run: npm run test
-        working-directory: reactjs-films-homework
+     
