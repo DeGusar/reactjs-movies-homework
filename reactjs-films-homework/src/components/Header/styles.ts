@@ -2,7 +2,12 @@ import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles(() => ({
   container: {
-    maxWidth: '1860px',
+    maxWidth: '90%',
+    padding: 0
+  },
+
+  toolbar: {
+    padding: 0
   },
 
   logo: {
@@ -24,7 +29,7 @@ export const useStyles = makeStyles(() => ({
     padding: '2px 4px',
     display: 'flex',
     alignItems: 'center',
-    width: '400px',
+    width: '500px',
     marginLeft: '40px',
     transition: 'all 1s',
     '@media (max-width:1200px)': {

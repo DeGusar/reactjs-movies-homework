@@ -6,7 +6,7 @@ import messages from './shared/localization/messages';
 import routes from './shared/constants/routes';
 import CssBaseline from '@mui/material/CssBaseline';
 import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
-import { Header } from './components';
+import { Layout } from './components';
 
 const darkTheme = createTheme({
   palette: {
@@ -21,13 +21,14 @@ function App() {
         <CssBaseline enableColorScheme />
         <StyledEngineProvider injectFirst>
           <IntlProvider locale="en" messages={messages.en}>
-            <Header />
-            <Routes>
-              <Route path={routes.MAIN} element={<Main />} />
-              <Route path={routes.ACTOR_PROFILE} element={<ActorProfile />} />
-              <Route path={routes.MOVIE_DETAILS} element={<MovieDetails />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
+            <Layout>
+              <Routes>
+                <Route path={routes.MAIN} element={<Main />} />
+                <Route path={routes.ACTOR_PROFILE} element={<ActorProfile />} />
+                <Route path={routes.MOVIE_DETAILS} element={<MovieDetails />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Layout>
           </IntlProvider>
         </StyledEngineProvider>
       </ThemeProvider>

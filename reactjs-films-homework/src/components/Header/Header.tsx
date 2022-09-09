@@ -38,7 +38,7 @@ export const Header = () => {
   return (
     <AppBar position="static">
       <Container className={classes.container}>
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <Box sx={{ flexGrow: 1.1 }}>
             <Typography
               variant="h5"
