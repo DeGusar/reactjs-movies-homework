@@ -40,7 +40,7 @@ export const Main = () => {
         {movies.map((elem) => {
           return (
             <Grid item key={elem} xs={12} md={6} xl={12 / 5}>
-              <MovieCard movieRating="6" />
+              <MovieCard popularity="6" id={1234} />
             </Grid>
           );
         })}

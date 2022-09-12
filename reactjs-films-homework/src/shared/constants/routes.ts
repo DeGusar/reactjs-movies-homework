@@ -1,7 +1,7 @@
 const routes = {
   MAIN: '/',
-  ACTOR_PROFILE: '/actor/:actorId',
-  MOVIE_DETAILS: '/movie/:movieId',
+  ACTOR_PROFILE: 'person/:id',
+  MOVIE_DETAILS: '/movie/:id',
 };
 
 export default routes;

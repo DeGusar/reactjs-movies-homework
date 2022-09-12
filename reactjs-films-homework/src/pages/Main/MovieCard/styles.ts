@@ -4,7 +4,14 @@ export const useStyles = makeStyles (() => ({
   cardWrapper: {
     height: '350px',
     position: 'relative',
-    backgroundColor: 'rgb(232,232,232)'
+    backgroundColor: 'rgb(232,232,232)',
+    cursor: 'pointer'
+  },
+
+  cardImage: {
+    objectFit: 'cover',
+    width: '100%',
+    height: '100%'
   },
 
   lowRating: {
