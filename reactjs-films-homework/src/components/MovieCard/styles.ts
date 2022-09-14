@@ -1,12 +1,16 @@
 import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles (() => ({
-  cardWrapper: {
-    height: '350px',
+type PropsType = {
+  imageHeight: string
+}
+
+export const useStyles = makeStyles ((props: PropsType) => ({
+  cardWrapper: (props: PropsType) => ({
+    height: `${props.imageHeight}`,
     position: 'relative',
     backgroundColor: 'rgb(232,232,232)',
     cursor: 'pointer'
-  },
+  }),
 
   cardImage: {
     objectFit: 'cover',

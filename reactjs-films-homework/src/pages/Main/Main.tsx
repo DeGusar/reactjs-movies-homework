@@ -2,7 +2,7 @@ import { Button, ButtonGroup, Grid, Pagination, Stack } from '@mui/material';
 import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useStyles } from './styles';
-import { MovieCard } from './MovieCard/MovieCard';
+import { MovieCard } from '../../components/';
 
 export const Main = () => {
   const classes = useStyles();
@@ -40,7 +40,7 @@ export const Main = () => {
         {movies.map((elem) => {
           return (
             <Grid item key={elem} xs={12} md={6} xl={12 / 5}>
-              <MovieCard popularity="6" id={1234} />
+              <MovieCard popularity="6" id={1234} imageHeight="350px" />
             </Grid>
           );
         })}
