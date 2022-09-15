@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install node modules
-        run: npm ci
+        run: npm ci --legacy-peer-deps
         working-directory: reactjs-films-homework
       - name: build project
         run: npm run build
