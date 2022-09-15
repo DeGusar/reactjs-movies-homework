@@ -3,6 +3,7 @@ import { useStyles } from './styles';
 import { ActorCard } from '../../components';
 import { PhotosComponent } from './PhotosComponent/PhotosComponent';
 import { KnownByComponent, KnownByComponentType } from './KnownByComponent/KnownByComponent';
+import { ActorDescription } from './ActorDescription/ActorDescription';
 
 const actor = {
   birthday: '1963-12-18',
@@ -62,21 +63,7 @@ export const ActorProfile = () => {
           <ActorCard imageHeight="450px" isDescription={false} {...actor} />
         </Grid>
         <Grid item xs={12} md={6} xl={9.5}>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="h4">{actor.name}</Typography>
-          </Stack>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Birthday:</Typography>
-            <Typography variant="body1">{actor.birthday}</Typography>
-          </Stack>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Place of birth:</Typography>
-            <Typography variant="body1">{actor.place_of_birth}</Typography>
-          </Stack>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Biography:</Typography>
-            <Typography variant="body1">{actor.biography}</Typography>
-          </Stack>
+          <ActorDescription {...actor} />
           <Stack>
             <Typography variant="h5">Photos</Typography>
             <PhotosComponent images={photos} />

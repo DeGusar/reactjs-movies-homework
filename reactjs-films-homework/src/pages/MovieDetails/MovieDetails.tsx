@@ -5,11 +5,10 @@ import { useStyles } from './styles';
 import { MovieCard } from '../../components';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { calculateMovieDuration } from '../../shared/helpers';
-import { Genres } from './Genres/Genres';
 import { MovieCast } from './MovieCast/MovieCast';
 import { ImagesComponent } from './ImagesComponent/ImagesComponent';
 import { RecommendationsType } from './Recommendations/Recommendations';
+import { MovieDescription } from './MovieDescription/MovieDescription';
 
 export type CastDataType = {
   adult: boolean;
@@ -349,7 +348,6 @@ export const MovieDetails = () => {
 
   const handleClickShawAll = () => setCastExtended((oldValue) => !oldValue);
 
-  const genres = ['Movie', 'Horror', 'Detective'];
   const images = [
     'https://res.cloudinary.com/rss-collection/image/upload/v1663146316/calendar/lotr1_movie_screencaps.com_1164.0_rmiqpd.webp',
     'https://res.cloudinary.com/rss-collection/image/upload/v1663146316/calendar/lotr1_movie_screencaps.com_1164.0_rmiqpd.webp',
@@ -375,33 +373,7 @@ export const MovieDetails = () => {
           <MovieCard popularity="8" id={1234} imageHeight="400px" isDescription={false} />
         </Grid>
         <Grid item xs={12} md={6} xl={9.5}>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Title:</Typography>
-            <Typography variant="h4">Movie Title</Typography>
-          </Stack>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Overview:</Typography>
-            <Typography variant="body1">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non animi sint a eveniet vel
-              rerum cupiditate est quam nisi magni sequi, laboriosam magnam ex provident repellat
-              officiis! Quo, natus nam.
-            </Typography>
-          </Stack>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Release date:</Typography>
-            <Typography variant="body1">2021-05-26</Typography>
-          </Stack>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Revenue:</Typography>
-            <Typography variant="body1">$ 123456789</Typography>
-          </Stack>
-          <Stack className={classes.descriptionItem}>
-            <Typography variant="body2">Duration:</Typography>
-            <Typography variant="body1">{calculateMovieDuration(139)}</Typography>
-          </Stack>
-          <Stack direction="row" spacing={1} className={classes.descriptionItem}>
-            <Genres genres={genres} />
-          </Stack>
+          <MovieDescription />
           <Stack direction="row" justifyContent="space-between">
             <Typography variant="h5">Top Billed Cast</Typography>
             <Button className={classes.showAllButton} onClick={handleClickShawAll}>

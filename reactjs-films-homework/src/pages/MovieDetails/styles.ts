@@ -5,11 +5,7 @@ export const useStyles = makeStyles(() => ({
     pointerEvents: 'none'
   },
 
-  descriptionItem: {
-    marginBottom: '20px'
-  },
-
-  showAllButton: {
+   showAllButton: {
     textTransform: 'none',
     color: "white",
     border: '1px solid white',
