@@ -1,8 +1,8 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(() => ({
-  movieDescription: {
-
+  imageWrapper: {
+    pointerEvents: 'none'
   },
 
   descriptionItem: {

@@ -9,8 +9,7 @@ export const useStyles = makeStyles((props: PropsType) => ({
     height: `${props.imageHeight}`,
     position: 'relative',
     backgroundColor: 'rgb(232,232,232)',
-    cursor: 'pointer',
-    borderRadius: '10px',
+    borderRadius: '5px',
     marginBottom: '5px'
      }),
 
@@ -18,6 +17,6 @@ export const useStyles = makeStyles((props: PropsType) => ({
     objectFit: 'cover',
     width: '100%',
     height: '100%',
-    borderRadius: '10px'
+    borderRadius: '5px'
   },
 }))

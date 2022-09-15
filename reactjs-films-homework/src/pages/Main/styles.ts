@@ -34,4 +34,7 @@ export const useStyles = makeStyles (() => ({
       color: 'black',
     }
   },
+  movieCard: {
+    cursor: 'pointer'
+  }
 }))

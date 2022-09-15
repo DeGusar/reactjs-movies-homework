@@ -1,11 +1,10 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(() => ({
-  castWrapper: {
-    paddingTop: '25px'
+  descriptionItem: {
+    marginBottom: '20px'
   },
-
-  actorCardWrapper: {
-    cursor: 'pointer'
+  knownByTitle: {
+    marginTop: '30px'
   }
 }))

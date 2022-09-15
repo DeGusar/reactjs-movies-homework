@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Box, Button, Grid, Stack, Typography } from '@mui/material';
+import { Button, Grid, Stack, Typography } from '@mui/material';
 import { Recommendations } from './Recommendations/Recommendations';
 import { useStyles } from './styles';
 import { MovieCard } from '../../components';
@@ -344,7 +344,7 @@ export const MovieDetails = () => {
   ] as CastDataType[];
 
   useEffect(() => {
-    //TODO write function to load data about movie
+    //TODO write function to load data  movie
   }, [movieId]);
 
   const handleClickShawAll = () => setCastExtended((oldValue) => !oldValue);
@@ -371,10 +371,10 @@ export const MovieDetails = () => {
   return (
     <>
       <Grid columnSpacing={4} container>
-        <Grid item xs={12} md={6} xl={2.5}>
+        <Grid item xs={12} md={6} xl={2.5} className={classes.imageWrapper}>
           <MovieCard popularity="8" id={1234} imageHeight="400px" isDescription={false} />
         </Grid>
-        <Grid item xs={12} md={6} xl={9.5} className={classes.movieDescription}>
+        <Grid item xs={12} md={6} xl={9.5}>
           <Stack className={classes.descriptionItem}>
             <Typography variant="body2">Title:</Typography>
             <Typography variant="h4">Movie Title</Typography>

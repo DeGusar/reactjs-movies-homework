@@ -1,5 +1,4 @@
 import { Box, Paper, Stack, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import { useStyles } from './styles';
 
 type MovieCardProps = {
@@ -7,6 +6,7 @@ type MovieCardProps = {
   id: number;
   imageHeight: string;
   isDescription?: boolean;
+  onClick?: () => void;
 };
 
 export const MovieCard = ({
@@ -14,18 +14,16 @@ export const MovieCard = ({
   id,
   imageHeight,
   isDescription = true,
+  onClick
 }: MovieCardProps) => {
   const classes = useStyles({ imageHeight });
-  const navigate = useNavigate();
-
-  const handleClick = () => navigate(`/movie/${id}`);
-
   return (
     <>
-      <Box className={classes.cardWrapper} onClick={handleClick}>
+      <Box className={classes.cardWrapper}>
         <Box
           component="img"
           src="https://kinopoiskapiunofficial.tech/images/posters/kp/328.jpg"
+          onClick={onClick}
           className={classes.cardImage}
         ></Box>
         <Paper className={Number(popularity) >= 7 ? classes.highRating : classes.lowRating}>

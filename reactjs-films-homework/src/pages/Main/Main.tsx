@@ -3,8 +3,11 @@ import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useStyles } from './styles';
 import { MovieCard } from '../../components/';
+import { useNavigate } from 'react-router-dom';
 
 export const Main = () => {
+  const navigate = useNavigate();
+
   const classes = useStyles();
   const [selectedBtn, setSelectedBtn] = useState(1);
   const movies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
@@ -40,7 +43,12 @@ export const Main = () => {
         {movies.map((elem) => {
           return (
             <Grid item key={elem} xs={12} md={6} xl={12 / 5}>
-              <MovieCard popularity="6" id={1234} imageHeight="350px" />
+              <MovieCard
+                popularity="6"
+                id={1234}
+                onClick={() => navigate(`/movie/1234`)}
+                imageHeight="350px"
+              />
             </Grid>
           );
         })}
