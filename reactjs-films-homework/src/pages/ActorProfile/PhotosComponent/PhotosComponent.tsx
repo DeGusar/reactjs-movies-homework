@@ -7,7 +7,6 @@ type PhotosComponentPropsType = {
 
 export const PhotosComponent = ({ images }: PhotosComponentPropsType) => {
   const classes = useStyles();
-  console.log(images);
 
   return (
     <Grid className={classes.imageWrapper} spacing={3} container>

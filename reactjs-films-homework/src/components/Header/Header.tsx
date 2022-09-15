@@ -29,6 +29,7 @@ export const Header = () => {
     setAnchorEl(event.currentTarget);
   };
 
+  // TODO add handler
   const handleKeyUp = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter' && query) {
       console.log('query');
