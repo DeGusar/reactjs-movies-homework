@@ -1,14 +1,13 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Button, Grid, Stack, Typography } from '@mui/material';
 import { Recommendations } from './Recommendations/Recommendations';
-import { useStyles } from './styles';
 import { MovieCard } from '../../components';
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import { MovieCast } from './MovieCast/MovieCast';
 import { ImagesComponent } from './ImagesComponent/ImagesComponent';
-import { RecommendationsType } from './Recommendations/Recommendations';
 import { MovieDescription } from './MovieDescription/MovieDescription';
+import { RecommendationsType } from './Recommendations/Recommendations';
+import { useStyles } from './styles';
 
 export type CastDataType = {
   adult: boolean;
@@ -346,7 +345,7 @@ export const MovieDetails = () => {
     //TODO write function to load data  movie
   }, [movieId]);
 
-  const handleClickShawAll = () => setCastExtended((oldValue) => !oldValue);
+  const handleClickShowAll = () => setCastExtended((oldValue) => !oldValue);
 
   const images = [
     'https://res.cloudinary.com/rss-collection/image/upload/v1663146316/calendar/lotr1_movie_screencaps.com_1164.0_rmiqpd.webp',
@@ -370,13 +369,13 @@ export const MovieDetails = () => {
     <>
       <Grid columnSpacing={4} container>
         <Grid item xs={12} md={6} xl={2.5} className={classes.imageWrapper}>
-          <MovieCard popularity="8" id={1234} imageHeight="400px" isDescription={false} />
+          <MovieCard popularity="8" id={1234} imageHeight="400px" isShowDescription={false} />
         </Grid>
         <Grid item xs={12} md={6} xl={9.5}>
           <MovieDescription />
           <Stack direction="row" justifyContent="space-between">
             <Typography variant="h5">Top Billed Cast</Typography>
-            <Button className={classes.showAllButton} onClick={handleClickShawAll}>
+            <Button className={classes.showAllButton} onClick={handleClickShowAll}>
               Show all
             </Button>
           </Stack>

@@ -45,13 +45,14 @@ export const Header = () => {
               variant="h5"
               onClick={() => navigate('/')}
               component="span"
+              data-testid="app-logo"
               className={classes.logo}
             >
               ReactJS-Films
             </Typography>
           </Box>
           <Box sx={{ flexGrow: 0.9 }}>
-            <Paper className={classes.paperActive}>
+            <Paper data-testid="input-search" className={classes.paperActive}>
               <InputBase
                 className={classes.input}
                 value={query}
@@ -65,7 +66,11 @@ export const Header = () => {
             </Paper>
           </Box>
           <Box>
-            <Typography className={classes.picker} onClick={handleClick}>
+            <Typography
+              data-testid="locale-picker"
+              className={classes.picker}
+              onClick={handleClick}
+            >
               EN
             </Typography>
             <Menu

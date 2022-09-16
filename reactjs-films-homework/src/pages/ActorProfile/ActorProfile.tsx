@@ -60,7 +60,7 @@ export const ActorProfile = () => {
     <>
       <Grid container columnSpacing={4}>
         <Grid item xs={12} md={6} xl={2.5}>
-          <ActorCard imageHeight="450px" isDescription={false} {...actor} />
+          <ActorCard imageHeight="450px" isShowDescription={false} {...actor} />
         </Grid>
         <Grid item xs={12} md={6} xl={9.5}>
           <ActorDescription {...actor} />

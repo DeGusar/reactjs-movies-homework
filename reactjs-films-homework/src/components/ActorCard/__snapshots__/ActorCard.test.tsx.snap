@@ -15,11 +15,13 @@ Object {
       </div>
       <p
         class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+        data-testid="actor-name"
       >
         Edward Norton
       </p>
       <p
         class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+        data-testid="actor-character"
       >
         "The Narrator"
       </p>
@@ -36,11 +38,13 @@ Object {
     </div>
     <p
       class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+      data-testid="actor-name"
     >
       Edward Norton
     </p>
     <p
       class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+      data-testid="actor-character"
     >
       "The Narrator"
     </p>

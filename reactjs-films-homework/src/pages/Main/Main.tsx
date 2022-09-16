@@ -40,18 +40,16 @@ export const Main = () => {
         </ButtonGroup>
       </Stack>
       <Grid rowSpacing={2} columnSpacing={7} className={classes.gridContainer} container>
-        {movies.map((elem) => {
-          return (
-            <Grid item key={elem} xs={12} md={6} xl={12 / 5}>
-              <MovieCard
-                popularity="6"
-                id={1234}
-                onClick={() => navigate(`/movie/1234`)}
-                imageHeight="350px"
-              />
-            </Grid>
-          );
-        })}
+        {movies.map((elem) => (
+          <Grid item key={elem} xs={12} md={6} xl={12 / 5}>
+            <MovieCard
+              popularity="6"
+              id={1234}
+              onClick={() => navigate(`/movie/1234`)}
+              imageHeight="350px"
+            />
+          </Grid>
+        ))}
       </Grid>
       <Stack direction="row" justifyContent="center">
         <Pagination

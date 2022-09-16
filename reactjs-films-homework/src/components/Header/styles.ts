@@ -18,6 +18,7 @@ export const useStyles = makeStyles(() => ({
     padding: '3px 10px',
     border: '1px solid white',
     fontWeight: '700',
+    borderRadius: '5px'
   },
 
   input: {

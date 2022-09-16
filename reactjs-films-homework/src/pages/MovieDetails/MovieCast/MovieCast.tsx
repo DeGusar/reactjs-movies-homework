@@ -1,10 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { ActorCard } from '../../../components';
 import { CastDataType } from '../MovieDetails';
 import { useStyles } from './styles';
 import { useNavigate } from 'react-router-dom';
+import { calculateCast } from '../../../shared/helpers';
 
 type MovieCastProps = {
   isCastExtended: boolean;
@@ -17,12 +17,8 @@ export const MovieCast = ({ isCastExtended, cast }: MovieCastProps) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isCastExtended || cast.length <= 7) {
-      setCastForShowing([...cast]);
-    } else {
-      setCastForShowing(cast.slice(0, 6));
-    }
-  }, [isCastExtended]);
+    setCastForShowing(calculateCast(isCastExtended, cast));
+  }, [isCastExtended, cast]);
 
   const handleClick = (id: number) => navigate(`/person/${id}`);
 
