@@ -14,9 +14,9 @@ describe('Header component', () => {
         </BrowserRouter>
       </IntlProvider>
     );
-    expect(screen.getByText('ReactJS-Films')).toBeInTheDocument();
-    expect(screen.getByText('EN')).toBeInTheDocument();
-    expect(screen.getByPlaceholderText('Movies, person, movie theatres')).toBeInTheDocument();
+    expect(screen.getByTestId('app-logo')).toBeInTheDocument();
+    expect(screen.getByTestId('locale-picker')).toBeInTheDocument();
+    expect(screen.getByTestId('input-search')).toBeInTheDocument();
   });
 
   it('Header snapshot', () => {

@@ -19,6 +19,7 @@ Object {
             >
               <span
                 class="MuiTypography-root MuiTypography-h5 makeStyles-logo-9 css-ag7rrr-MuiTypography-root"
+                data-testid="app-logo"
               >
                 ReactJS-Films
               </span>
@@ -28,6 +29,7 @@ Object {
             >
               <div
                 class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 makeStyles-paperActive-12 css-1ps6pg7-MuiPaper-root"
+                data-testid="input-search"
               >
                 <div
                   class="MuiInputBase-root MuiInputBase-colorPrimary makeStyles-input-11 css-1le28he-MuiInputBase-root"
@@ -67,6 +69,7 @@ Object {
             >
               <p
                 class="MuiTypography-root MuiTypography-body1 makeStyles-picker-10 css-ahj2mt-MuiTypography-root"
+                data-testid="locale-picker"
               >
                 EN
               </p>
@@ -91,6 +94,7 @@ Object {
           >
             <span
               class="MuiTypography-root MuiTypography-h5 makeStyles-logo-9 css-ag7rrr-MuiTypography-root"
+              data-testid="app-logo"
             >
               ReactJS-Films
             </span>
@@ -100,6 +104,7 @@ Object {
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 makeStyles-paperActive-12 css-1ps6pg7-MuiPaper-root"
+              data-testid="input-search"
             >
               <div
                 class="MuiInputBase-root MuiInputBase-colorPrimary makeStyles-input-11 css-1le28he-MuiInputBase-root"
@@ -139,6 +144,7 @@ Object {
           >
             <p
               class="MuiTypography-root MuiTypography-body1 makeStyles-picker-10 css-ahj2mt-MuiTypography-root"
+              data-testid="locale-picker"
             >
               EN
             </p>

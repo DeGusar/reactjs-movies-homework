@@ -5,7 +5,7 @@ type MovieCardProps = {
   popularity: string;
   id: number;
   imageHeight: string;
-  isDescription?: boolean;
+  isShowDescription?: boolean;
   onClick?: () => void;
 };
 
@@ -13,10 +13,12 @@ export const MovieCard = ({
   popularity,
   id,
   imageHeight,
-  isDescription = true,
-  onClick
+  isShowDescription = true,
+  onClick,
 }: MovieCardProps) => {
   const classes = useStyles({ imageHeight });
+  const minimalValueOfHighRating = 7;
+
   return (
     <>
       <Box className={classes.cardWrapper}>
@@ -26,15 +28,24 @@ export const MovieCard = ({
           onClick={onClick}
           className={classes.cardImage}
         ></Box>
-        <Paper className={Number(popularity) >= 7 ? classes.highRating : classes.lowRating}>
+        <Paper
+          className={
+            Number(popularity) >= minimalValueOfHighRating ? classes.highRating : classes.lowRating
+          }
+          data-testid="movie-card-rating"
+        >
           {popularity}
         </Paper>
       </Box>
-      {isDescription && (
+      {isShowDescription && (
         <>
-          <Typography className={classes.title}>MovieTitle</Typography>
+          <Typography data-testid="movie-card-title" className={classes.title}>
+            MovieTitle
+          </Typography>
           <Stack>
-            <Typography className={classes.genre}>Genre</Typography>
+            <Typography data-testid="movie-card-genre" className={classes.genre}>
+              Genre
+            </Typography>
           </Stack>
         </>
       )}

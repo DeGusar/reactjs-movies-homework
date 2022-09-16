@@ -6,24 +6,31 @@ import { BrowserRouter } from 'react-router-dom';
 import messages from '../../shared/localization/messages';
 
 describe('MovieCard component', () => {
+  const defaultProps = {
+    popularity: '8',
+    id: 1234,
+    imageHeight: '400px',
+    isShowDescription: true,
+  };
+
   it('MovieCard component should render correctly', () => {
     render(
       <IntlProvider locale="en" messages={messages.en}>
         <BrowserRouter>
-          <MovieCard popularity="8" id={1234} imageHeight="400px" isDescription={true} />
+          <MovieCard {...defaultProps} />
         </BrowserRouter>
       </IntlProvider>
     );
-    expect(screen.getByText('MovieTitle')).toBeInTheDocument();
-    expect(screen.getByText('8')).toBeInTheDocument();
-    expect(screen.getByText('Genre')).toBeInTheDocument();
+    expect(screen.getByTestId('movie-card-title')).toBeInTheDocument();
+    expect(screen.getByTestId('movie-card-rating')).toBeInTheDocument();
+    expect(screen.getByTestId('movie-card-genre')).toBeInTheDocument();
   });
 
   it('MovieCard snapshot', () => {
     const view = render(
       <IntlProvider locale="en" messages={messages.en}>
         <BrowserRouter>
-          <MovieCard popularity="8" id={1234} imageHeight="400px" isDescription={false} />
+          <MovieCard {...defaultProps} />
         </BrowserRouter>
       </IntlProvider>
     );

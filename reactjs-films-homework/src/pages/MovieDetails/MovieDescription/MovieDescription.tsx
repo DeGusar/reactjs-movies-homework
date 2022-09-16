@@ -32,7 +32,7 @@ export const MovieDescription = () => {
       </Stack>
       <Stack className={classes.descriptionItem}>
         <Typography variant="body2">Duration:</Typography>
-        <Typography variant="body1">{calculateMovieDuration(139)}</Typography>
+        <Typography variant="body1">{calculateMovieDuration(79)}</Typography>
       </Stack>
       <Stack direction="row" spacing={1} className={classes.descriptionItem}>
         <Genres genres={genres} />

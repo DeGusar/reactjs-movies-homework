@@ -14,9 +14,26 @@ Object {
         />
         <div
           class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 makeStyles-highRating-11 css-1ps6pg7-MuiPaper-root"
+          data-testid="movie-card-rating"
         >
           8
         </div>
+      </div>
+      <p
+        class="MuiTypography-root MuiTypography-body1 makeStyles-title-12 css-ahj2mt-MuiTypography-root"
+        data-testid="movie-card-title"
+      >
+        MovieTitle
+      </p>
+      <div
+        class="css-nen11g-MuiStack-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 makeStyles-genre-13 css-ahj2mt-MuiTypography-root"
+          data-testid="movie-card-genre"
+        >
+          Genre
+        </p>
       </div>
     </div>
   </body>,
@@ -30,9 +47,26 @@ Object {
       />
       <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 makeStyles-highRating-11 css-1ps6pg7-MuiPaper-root"
+        data-testid="movie-card-rating"
       >
         8
       </div>
+    </div>
+    <p
+      class="MuiTypography-root MuiTypography-body1 makeStyles-title-12 css-ahj2mt-MuiTypography-root"
+      data-testid="movie-card-title"
+    >
+      MovieTitle
+    </p>
+    <div
+      class="css-nen11g-MuiStack-root"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 makeStyles-genre-13 css-ahj2mt-MuiTypography-root"
+        data-testid="movie-card-genre"
+      >
+        Genre
+      </p>
     </div>
   </div>,
   "debug": [Function],

@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { useStyles } from './styles';
 
 type ActorCardProps = {
-  isDescription?: boolean;
+  isShowDescription?: boolean;
   character?: string;
   name: string;
   imageHeight: string;
@@ -10,7 +10,7 @@ type ActorCardProps = {
 };
 
 export const ActorCard = ({
-  isDescription = true,
+  isShowDescription = true,
   character,
   name,
   imageHeight,
@@ -27,10 +27,10 @@ export const ActorCard = ({
         />
       </Box>
 
-      {isDescription && (
+      {isShowDescription && (
         <>
-          <Typography>{name}</Typography>
-          <Typography>{`"${character}"`}</Typography>
+          <Typography data-testid="actor-name">{name}</Typography>
+          <Typography data-testid="actor-character">{`"${character}"`}</Typography>
         </>
       )}
     </>
